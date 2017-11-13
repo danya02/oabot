@@ -225,7 +225,7 @@ def get_oa_link(paper):
 
     candidate_urls = sort_links([
         record.get('pdf_url') for record in
-        paper.get('records',[])  if record.get('pdf_url')
+        paper_object.get('records',[])  if record.get('pdf_url')
     ])
     for url in sort_links(candidate_urls):
         if url:
